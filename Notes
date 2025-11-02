@@ -1,0 +1,35 @@
+Modules in Matplotlib
+
+Matplotlib has several submodules, each designed for specific types of plotting and functionality. Some of the main and commonly used submodules include:
+
+pyplot: The most widely used submodule for creating 2D plots and charts using a MATLAB-like interface (e.g., line plots, scatter plots, bar charts, histograms).
+
+axes: Contains classes for creating and managing plot axes and coordinate systems.
+
+figure: Deals with figure-level operations such as creating and manipulating figure windows.
+
+artist: Contains the base classes for all objects that can be rendered on the figure, such as lines, text, shapes.
+
+colors: Provides functions and classes for color conversion and handling colormaps.
+
+font_manager: Manages fonts used in plots.
+
+ticker: Controls the placement and formatting of ticks on axes.
+
+patches: Contains shapes like rectangles, circles, polygons that can be added to plots.
+
+gridspec: Enables complex subplot grid layouts.
+
+animation: Supports creating animations from plots.
+
+image: Functionality for displaying images.
+
+text: Support for adding and manipulating text in plots.
+
+contour: For contour and filled contour plots.
+
+
+
+Random_state : split  dataset same each time when data gets splitted 
+
+
