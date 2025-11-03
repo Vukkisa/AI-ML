@@ -32,4 +32,4 @@ contour: For contour and filled contour plots.
 
 Random_state : split  dataset same each time when data gets splitted 
 
-
+git remote -v 
