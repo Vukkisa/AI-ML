@@ -33,3 +33,72 @@ contour: For contour and filled contour plots.
 Random_state : split  dataset same each time when data gets splitted 
 
 git remote -v 
+
+
+python -m venv /path/to/new/virtual/environment
+
+source /Users/vj/Desktop/AI-ML/env/bin/activate && pip install langchain langchain-google-genai
+
+
+source /Users/vj/Desktop/AI-ML/env/bin/activate && pip install accelerate for faster image creation 
+
+programming way to installing required packages : 
+import sys, subprocess
+try:
+    from transformers import AutoTokenizer
+except Exception:
+    print("Installing transformers into the current Python environment...")
+    subprocess.check_call([sys.executable, '-m', 'pip', 'install', '--upgrade', 'pip'])
+    subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'transformers'])
+    from transformers import AutoTokenizer
+
+
+
+    . Create and Edit Your Modelfile
+    
+
+First, make a new file called Modelfile and add your settings. Here’s a sample Modelfile that customizes behavior and parameters:
+
+text
+# Modelfile: Defines a custom LLM for developer assistance
+
+FROM llama2:latest
+
+SYSTEM "You are a technical assistant focused on AI models. Answer concisely and accurately."
+
+PARAMETER temperature 0.7
+PARAMETER num_ctx 4096
+
+TEMPLATE """User: {{ .Prompt }}
+Assistant: {{ .Response }}"""
+FROM: Sets the base model to build from.
+
+SYSTEM: Changes the system prompt/personality.
+
+PARAMETER: Adjusts how creative (temperature), context size, etc.
+
+TEMPLATE: Customizes how prompts and responses are formatted.
+
+2. Build the Custom Model
+
+Run this command in your terminal (where Modelfile is located):
+
+text
+ollama create mydevassistant --file Modelfile
+mydevassistant — this is the custom model name.
+
+3. Test Your Custom Model
+
+To interact with your new model, use:
+
+text
+ollama run mydevassistant
+Now, any prompt will use your new instructions and settings!
+
+Summary Table:
+
+Step	Command	Description
+Create Modelfile	(use code editor, save as Modelfile)	Write settings/configuration for your LLM custom model
+Build the model	ollama create mydevassistant --file Modelfile	Builds a named local model from your Modelfile
+Run the model	ollama run mydevassistant	Interact with your custom LLM
+For more, see the official [Ollama Modelfile documentation].​
