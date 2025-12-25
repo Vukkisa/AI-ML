@@ -14,11 +14,11 @@ client = genai.Client(api_key=api_key)
 
 try:
     response = client.models.generate_content(
-        model='emini-1.5-flash',   # <- replace with the exact id returned by the list command
+        model='gemini-1.5-flash',   
         contents='Explain how AI works in one sentence.'
     )
     print(response.text)
 except ClientError as e:
-    print("API error:", e)   # prints status and message for debugging
+    print("API error:", e)   
     raise
 

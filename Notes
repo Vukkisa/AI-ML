@@ -102,3 +102,8 @@ Create Modelfile	(use code editor, save as Modelfile)	Write settings/configurati
 Build the model	ollama create mydevassistant --file Modelfile	Builds a named local model from your Modelfile
 Run the model	ollama run mydevassistant	Interact with your custom LLM
 For more, see the official [Ollama Modelfile documentation].​
+
+
+ollama create phi3mini-sql -f Modelfile
+ollama run phi3mini-sql
+l
